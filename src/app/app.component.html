@@ -1,4 +1,13 @@
-<h1>Comments</h1>
-<ul>
-    <li *ngFor="let comment of comments">{{comment}}</li>
-</ul>
+<div>
+	<h1>Comments</h1>
+		<!-- [(ngModel)]= "comment" -->
+		<input [(ngModel)]="newAuthor" type="text" id="author" placeholder="author">
+		<input  [(ngModel)]="newComment" type="text" id="comment"  placeholder="comments">
+		<button type="submit" (click)="addOne()">Submit</button>
+	<ul>
+	    <li *ngFor="let comment of comments">{{comment.author}} {{comment.comment}}<button (click)="deleteOne(comment)">Delete</button></li>
+
+	</ul>
+</div>
+
+
