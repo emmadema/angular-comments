@@ -4,7 +4,7 @@
 		<input  [(ngModel)]="newComment" type="text" id="comment"  placeholder="comments">
 		<button type="submit" (click)="addOne()">Submit</button>
 	<ul>
-	    <li *ngFor="let comment of comments">{{comment.author}} {{comment.comment}}<button (click)="deleteOne(comment)">Delete</button></li>
+	    <li *ngFor="let comment of comments">{{comment.author}} {{comment.comment}}<button (click)="deleteOne(comment)">Delete</button><button id='update'(click)="editOne(comment)">Update</button></li>
 
 	</ul>
 </div>

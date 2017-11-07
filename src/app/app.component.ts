@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormArray, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,8 @@ export class AppComponent {
 
 	newAuthor: string = "";
 	newComment: string = "";
+
+	edit_value = true;
 
   addOne(): any {
   	// console.log(this);
@@ -31,7 +34,14 @@ export class AppComponent {
 		console.log(comment);
 	}
 
-	updateOne(): any {
+	editOne(comment): any {
+		this.edit_value = null;
+		let commentToUpdate = this.comments.indexOf(comment);
+		console.log(commentToUpdate);
+		//need to turn the name and comment to input boxes
+		//add a hidden input box that is only appeneded when update is hit
+		//hide the name and comment
+
 		
 	}
 }
